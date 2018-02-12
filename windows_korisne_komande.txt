@@ -1,0 +1,31 @@
+mstsc /admin - logovanje kao admin do windows-a 2008 R2 kada su zauzete sve sesije
+
+netstat -ano - gledanje servisa na windows-u
+
+To remove the Oracle Client:
+1. From the command line prompt enter:
+reg delete "HKLM\SOFTWARE\Wow6432Node\ORACLE" /f
+rd "<C:\Program Files (x86)\Oracle>" /S /Q
+
+# Pokretanje taska
+schtasks /run /tn SASBulk
+
+# Izlistavanje tasko-va
+schtasks /query
+
+# Prikaz logovanih user-a na udaljenom serveru
+query user /server ljutamasina
+
+# Kick-ovanje user-a sa ID-ijem 1
+logoff /server ljutamasina 1 /v
+Logging off session ID 1
+
+# Proširenje virtualnog diska na VirtualBox-u na 15GB
+cd C:\Program Files\Oracle\VirtualBox
+VBoxManage modifyhd “C:\Users\mladenstan\VirtualBox VMs\Ubuntu 16.04\Ubuntu 16.04.vdi” --resize 15360
+
+# Run taska remotely
+SCHTASKS /Run /S ljutamasina /I /TN "Kreiranje dokumenta"
+
+# Listanje
+SCHTASKS /Query /FO LIST /S ljutamasina
