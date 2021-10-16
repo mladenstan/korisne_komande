@@ -271,3 +271,7 @@ rm nesto.txt > /dev/null && echo "File exists and was removed" || echo "File doe
 
 # 25 korisnih apt-get komandi
 https://www.tecmint.com/useful-basic-commands-of-apt-get-and-apt-cache-for-package-management/
+
+# Pregled velicine sortiranih foldera
+du -hs /var/lib/docker/* | sort -h
+
